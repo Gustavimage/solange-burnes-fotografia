@@ -1,0 +1,23 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+footer {
+    background-color:$fondobase;   
+    display: flex;
+    flex-direction:column;
+    height: 35vh;
+    width: auto;
+    justify-content: space-between;}    
+   .contenedor-footer{
+        display: inline;
+        text-align: auto;
+        text-decoration: none;
+    }
+    .detalle-footer{
+        text-align: center;   
+    }
+
+.copyright{
+    @include flex-valores (space-evenly,center);
+    color: $colo-base-tipografia;
+    margin: 20px;
+ }

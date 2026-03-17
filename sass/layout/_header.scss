@@ -1,0 +1,15 @@
+@use '../utilities/variables' as *;
+header {
+    background-color:$fondobase;
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+
+}
+.contenedor-header{
+    margin: 40px;
+}
+
+

@@ -1,0 +1,239 @@
+@use '../utilities/variables' as *;
+.contenedormain{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 50px 10% 65px 10%;
+    flex-wrap: wrap;
+}
+.contenedormain{
+    animation-name: contenedormain;
+    animation-duration: 15s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-play-state:initial;
+}
+.contenedorcontacto{
+    display: flex;
+    display: inline block;
+    align-items: flex-start;   
+    justify-content: center; 
+    gap: 40px;              
+    margin: 50px 100px 80px 5px;
+    max-width: 100%;      
+}
+.formulario {
+    flex: 2;              
+}
+.ima-contacto img {
+    width: 50vw;
+    height: 30vh;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.domicilio-contacto{
+    margin-top: 30px;
+    text-align: right;
+}
+.contenedorsolange {
+    display: grid;
+    align-items: center;
+    gap: 30px;
+    margin: 50px 200px 80px 150px;
+}
+legend{
+    font-size: 15px;
+}
+.contenedor-fotoexterior{
+    display: flex;
+    justify-content:center;
+    align-items:normal;
+    padding: 25px 25px 5px;
+    margin: 50px 10% 80px 10%;
+    gap: 30px;
+    border: 0.5px solid white;
+}
+.contenedor-foto-estudio{
+    display: flex;
+    justify-content:center;
+    align-items:normal;
+    padding: 25px 25px 5px;
+    margin: 50px 10% 80px 10%;
+    gap: 30px;
+    border: 0.5px solid white;
+}
+.contenedor-foto-montaje{
+    display: flex;
+    justify-content: center;
+    align-items:normal;
+    padding: 25px 25px 5px;
+    margin: 50px 10% 80px 10%;
+    gap: 30px;
+    border: 0.5px solid white;
+}
+form{
+    display: inline-block;
+    color: white;
+    font-family: $tipografia-base;
+    gap: 5px
+}
+figure img {
+
+    width: 100%;
+    max-width: 1fr; 
+    height: auto;
+}
+div img {
+    width: auto; 
+    height: auto;
+}
+div div figure img{
+    height: 300px;
+    width: 400px;
+}
+.ima{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 15px 15px;
+    margin: 50px 10% 80px 10%
+}
+ul li a:hover{
+    color:$mouse-hover;
+    text-decoration: underline;
+}
+div p{
+    color: white;
+}
+.fo1:hover{
+    transform: scale(1.1);
+    filter: grayscale(10) blur(0px);
+}
+input:focus-visible{
+    outline: 1px solid $borde-imput-form;
+    outline-offset: 1px;
+    border-color: $borde-imput-form;
+}
+p::selection {
+    color: $color-font-seleccion;
+    background-color: $bg-seleccion;
+}
+h1{
+    color: rgb(59, 58, 58);
+    font-size: 35px;
+    margin: 0px 1% 0px 10%;
+    text-align:left;
+}
+h2{
+    color: white;
+    font-size: 30px;
+}
+
+@media (max-width: 500px) {
+body {
+    background-color: $bg-body;
+}
+.contenedormain{
+    margin: 20px 15px;
+    border-width: 3px;
+    align-items: center;
+    display: block;
+}
+.contenedor-fotoexterior{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    display: block;
+}
+.contenedor-foto-estudio{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    display: block;
+}
+.contenedor-foto-montaje{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    display: block;
+}
+.ima{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px; ;
+    margin: $margen-main-base;
+}
+.contenedorsolange{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin: $margen-main-base;
+    gap: 15px;
+}
+.contenedorcontacto {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.domicilio-contacto{
+    margin: auto;
+    text-align: center;
+}
+.ima-contacto img{
+    order: -1;
+    margin: auto;
+}
+.contenedor-header{
+    background-color:$fondobase;
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    width: auto;
+    align-items:center;
+    z-index: 1;
+}
+.menu-boton{
+    background-color:$fondobase;
+    display: flex;
+    display: block;
+    height: auto;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+    margin: 1px;
+}
+h1{
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+img {
+    display:block ;
+    max-width: 100%;
+    height: auto;
+}
+figure img {
+    max-width: 0.1fr; 
+}
+div div figure img{
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes contenedormain{
+ 0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  20%,80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);}
+}
+}
